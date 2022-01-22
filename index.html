@@ -1,4 +1,59 @@
 <!DOCTYPE html>
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+function Rotator(start_from){
+    var phrases = ["Авторадио Каменск","89.6 FM","Реклама на Авторадио: т.49-0-49"];
+    var total = phrases.length;
+    var interval = 6000;
+    if(void 0 === start_from){
+        start_from = 0;
+    }
+ 
+    $(".textrotator").text(phrases[start_from]).animate({"opacity":"1"}, 1000, function(){
+                if(start_from >= (total-1)){
+                    setTimeout(function(){
+                        $(".textrotator").animate({"opacity":"0"}, 1000, function(){
+                            Rotator();
+                        });
+                    }, interval);
+                }else{
+                    start_from++;
+                    setTimeout(function(){
+                        $(".textrotator").animate({"opacity":"0"}, 1000,function(){
+                            Rotator(start_from);
+                        });
+                    }, interval);
+         
+                }           
+         
+    })
+}
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -12,7 +67,7 @@
     <!--Скрипт rds  -->
     var rds_text0 = "Авторадио Каменск";
     var rds_text1 = "89.6 FM";
-    var rds_text2 = "Реклама на Авторадио: т.49-0-49 ";
+    var rds_text2 = "Реклама на Авторадио: т.49-0-49";
     var rds_text3 = "";
     var rds_text_count = 0;
     function onload() {
