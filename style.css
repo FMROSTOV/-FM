@@ -8,22 +8,6 @@ body {
     margin: 0;
     font-family: "Raleway",sans-serif;
 }
-#text {
-    height: 100px;
-    }
-.name {
-    font: 30px Tahoma;
-    display: block;
-    margin: 0 0 10px 0;
-    color: #0094d6;
-    text-shadow: 1px 1px 0 white, 2px 2px 2px #DDD;
-    }
-.descr {
-    font: 15px Tahoma;
-    padding: 0 0 0 35px;
-    color: #ff7700;
-    display: block;
-    }
 h1 {
     margin: 0;
     font-size: 33px;
