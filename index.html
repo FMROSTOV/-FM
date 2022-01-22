@@ -8,63 +8,6 @@
 
 </head>
 <body>
-      <script>
-    <!--Скрипт rds  -->
-    var rds_text0 = "Авторадио Каменск";
-    var rds_text1 = "89.6 FM";
-    var rds_text2 = "Реклама на Авторадио: т.49-0-49";
-    var rds_text3 = "";
-    var rds_text_count = 0;
-    function onload() {
-
-
-
-
-        $("#rds_text_count").fadeOut(0);
-
-    if (rds_text_count == 0) {
-    document.getElementById("rds_text_count").innerHTML= rds_text0;
-    $("#rds_text_count").fadeIn(500);
-
-    }else if (rds_text_count == 1) {
-    document.getElementById("rds_text_count").innerHTML= rds_text1;
-    $("#rds_text_count").fadeIn(500);
-    } else if (rds_text_count == 2) {
-        document.getElementById("rds_text_count").innerHTML= rds_text2;
-        $("#rds_text_count").fadeIn(500);
-    }
-
-    else {  var xhr = new XMLHttpRequest();
-        rds_text_count = -1;
-        xhr.open('GET', 'https://github.com/FMROSTOV/FMRos.github.io/blob/796a764be2691551c8f8e9d3eefef61fb14c881f/10303E9500080026.txt', false);
-        xhr.send();
-//alert (xhr.status);
-        if (xhr.status != 200) {
-            // обработать ошибку
-            // alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
-
-
-        } else {
-            // вывести результат
-            //alert(xhr.responseText);
-           document.getElementById("rds_text_count").innerHTML="За бортом " + xhr.responseText + "°C ";
-            $("#rds_text_count").fadeIn(500);
-        }
-
-
-    }
-    rds_text_count++;
-    //        alert(rds_text_count);
-
-
-
-
-    setTimeout(onload, 5000);
-    }
-
-
-    </script>
-    <!--Конец rds     -->
 
 <!-- partial:index.partial.html -->
 <html>
