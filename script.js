@@ -5,6 +5,9 @@ var audio = {    
             $that.components.media();        
         });    
     },
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+<script type="text/javascript" src="https://raw.github.com/malsup/cycle/master/jquery.cycle.lite.js"></script>
+
     components: {        
         media: function(target) {            
             var media = $('audio.fc-media', (target !== undefined) ? target : 'body');            
@@ -17,7 +20,7 @@ var audio = {    
                     iPadUseNativeControls: true,
                     iPhoneUseNativeControls: true,
                     AndroidUseNativeControls: true                
-                });            
+                });  
             }        
         },
             
