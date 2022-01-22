@@ -6,6 +6,29 @@
   <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css'><link rel="stylesheet" href="./style.css">
 
+  <script>
+
+	var text = "Hello, World!"; // Ваш текст
+	var delay = 100; // Скорость печатания
+	var elem = document.getElementById("result"); // id элемента для вывода результата
+
+	var print_text = function(text, elem, delay) {
+		
+		if(text.length > 0) {
+		
+			elem.innerHTML += text[0];
+			
+			setTimeout(
+			
+				function() {
+				
+					print_text(text.slice(1), elem, delay);  
+					
+				}, delay
+				
+			);
+			
+  
 </head>
 <body>
 
@@ -35,6 +58,8 @@
             </div>
         </div>
     </div>
+      
+   <div id="result"></div>   
 </body>
 </html>
 <!-- partial -->
